@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" type="text/css" href="../css/flipbook.min.css" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+        <script src="../js/flipbook.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#container').flipBook({
+                    pages: [
+                        {
+                            src: 'assets/images/book/page1.jpg',
+                            thumb: 'assets/images/book/thumb1.jpg',
+                            title: 'Cover',
+                            htmlContent: `<div style="position:absolute; top:340px; left:70px; font-size: 26px; text-align: center">
+                                            <a href="background_color.html" style="color: yellowgreen">Link to 3d flipbook</a>
+                                            <p style="color:#FFF">HTML Content on the page</p>
+                                            <iframe width="640" height="390" src="https://www.youtube.com/embed/UfvSlfxXuIQ" frameborder="0" allowfullscreen></iframe>
+                                          </div>`,
+                        },
+                        {
+                            src: 'assets/images/book/page2.jpg',
+                            thumb: 'assets/images/book/thumb2.jpg',
+                            title: 'Page two',
+                            htmlContent:
+                                '<iframe src="page_iframe.html" frameborder="0" allowfullscreen style="position:absolute; top:190px; left:560px;></iframe>',
+                        },
+                        { src: 'assets/images/book/page3.jpg', thumb: 'assets/images/book/thumb3.jpg', title: 'Page three' },
+                        { src: 'assets/images/book/page4.jpg', thumb: 'assets/images/book/thumb4.jpg', title: 'Page four' },
+                        { src: 'assets/images/book/page5.jpg', thumb: 'assets/images/book/thumb5.jpg', title: 'Page five' },
+                        { src: 'assets/images/book/page6.jpg', thumb: 'assets/images/book/thumb6.jpg', title: 'Page six' },
+                        { src: 'assets/images/book/page7.jpg', thumb: 'assets/images/book/thumb7.jpg', title: 'Page seven' },
+                        { src: 'assets/images/book/page8.jpg', thumb: 'assets/images/book/thumb8.jpg', title: 'Last' },
+                    ],
+                    zoomLevels: [0.9, 3],
+                    deeplinking: { enabled: true, prefix: '' },
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="container" />
+    </body>
+</html>
